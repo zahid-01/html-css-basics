@@ -5,8 +5,6 @@
 
 .container {
   width: 700px;
-  /* margin-left: auto;
-  margin-right: auto; */
   margin: 0 auto;
 }
 
@@ -14,6 +12,7 @@ body {
   color: #444;
   font-family: sans-serif;
   border-top: 5px solid #1098ad;
+  position: relative;
 }
 
 .page-header {
@@ -52,6 +51,7 @@ body {
 
 .post-header {
   margin-bottom: 30px;
+  position: relative;
 }
 
 ul,
@@ -108,7 +108,13 @@ li {
 }
 
 nav a {
-  padding: 10px;
+  margin-top: 10px;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+nav a:last-child {
+  margin: 0;
 }
 
 aside h4 {
@@ -117,4 +123,52 @@ aside h4 {
 
 li:last-child {
   margin: 0;
+}
+
+.footer-like {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+.header-like {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
+
+h1::first-letter {
+  font-style: normal;
+  padding: 10px;
+}
+
+p + h6::first-line {
+  color: red;
+}
+
+h2 {
+  background-color: orange;
+  position: relative;
+}
+
+h2::after {
+  content: "DEMO";
+  display: inline-block;
+  font-size: 10px;
+  font-weight: bold;
+  background-color: yellow;
+  padding: 5px 10px;
+  position: absolute;
+  /* right: -25px;
+  top: -10px; */
+  top: 0;
+  left: 0;
 }
